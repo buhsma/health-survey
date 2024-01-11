@@ -1,0 +1,22 @@
+{
+  "name": "php-intro",
+  "version": "1.0.0",
+  "description": "This is a simple php docker-compose setup with nginx. With this setup we will build a small website. The goal of this project is not to build the fanciest website, but to apply our new learnt topics php and sass.",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch $(pwd)/www/public/src/scss:$(pwd)/www/public/build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opportunity-zh/php-docker-intro.git"
+  },
+  "author": "Tugce Nur Tas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opportunity-zh/php-docker-intro/issues"
+  },
+  "homepage": "https://github.com/opportunity-zh/php-docker-intro#readme",
+  "devDependencies": {
+    "sass": "^1.34.1"
+  }
+}
