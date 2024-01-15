@@ -1,3 +1,8 @@
+@import url("./styles-comp/header.css");
+@import url("./styles-comp/grid.css");
+@import url("./styles-comp/footer.css");
+
+
 :root {
     --primary-color: #3498db;
     --secondary-color: #e74c3c;
@@ -9,8 +14,14 @@
     --highlight-color: #3498db;
     --border-color: #bdc3c7;
     --dark-background-color: #34495e;
-    --grid-gardient-color1: black;
-    --grid-gardient-color2: rgb(255, 255, 255);
+    --grid-gradient-color1: rgb(74, 74, 100);
+    --grid-gradient-color2: rgb(37, 24, 223);
+    --grid-border-color: rgb(6, 0, 90);
+
+    --first-color: #f8fcfb;
+    --second-color: #c9fdd7;
+    --third-color: #79d1c3;
+    --fourth-color: #6892d5;
     
     --color1: #1abc9c;
     --color2: #f1c40f;
@@ -32,6 +43,9 @@
   }
 
 
-  @import url(./styles-comp/header.css);
-  @import url(./styles-comp/grid.css);
-  @import url(./styles-comp/footer.css);
+  
+  /* www/public/src/css/styles-comp/grid.css */
+
+
+
+  

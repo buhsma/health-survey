@@ -1,15 +1,18 @@
 .grid {
     display: grid;
-    grid-template-columns: 1fr minmax(300px, 2fr) 1fr;
+    grid-template-columns: 1fr minmax(320px, 2fr) 1fr;
     grid-template-rows: 100vh;
 }
 
 .grid__leftBox {
-    width: 100%;
-    background: linear-gradient(var(--grid-gardient-color1, --grid-gardient-color2));
+    
+    background: linear-gradient(90deg, var(--second-color), var(--third-color));
+    border-right: 8px solid var(--grid-border-color);
+    
 }
 
 .grid__rightBox {
-    background: linear-gradient(var(--grid-gardient-color1, --grid-gardient-color2));
+    background: linear-gradient(270deg, var(--second-color), var(--third-color));
+    border-left: 8px solid var(--grid-border-color);
 }
 
