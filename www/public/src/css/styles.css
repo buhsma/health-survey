@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --accent-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #ecf0f1;
+    --link-color: #9b59b6;
+    --button-color: #f39c12;
+    --highlight-color: #3498db;
+    --border-color: #bdc3c7;
+    --dark-background-color: #34495e;
+    --grid-gardient-color1: black;
+    --grid-gardient-color2: rgb(255, 255, 255);
+    
+    --color1: #1abc9c;
+    --color2: #f1c40f;
+    --color3: #e67e22;
+    --color4: #95a5a6;
+    --color5: #27ae60;
+    --color6: #d35400;
+    --color7: #8e44ad;
+    --color8: #2980b9;
+    --color9: #c0392b;
+    --color10: #7f8c8d;
+    
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  @import url(./styles-comp/header.css);
+  @import url(./styles-comp/grid.css);
+  @import url(./styles-comp/footer.css);
