@@ -15,6 +15,7 @@ include './src/components/templates/header.php';
       <label for="q2n">No</label>
     </div>
 <hr>
+
     <div class="form__questionField">
       <p class="form__question__text">How important is physical activity to you?</p>
       <label for="q3">Not at all important - Very important</label>

@@ -31,6 +31,7 @@ include './src/components/templates/header.php';
       <label for="q410">Other</label><br>
       </div>
 <hr>
+
     <div class="form__questionField">
       <p class="form__question__text">Do you feel you do too little, just enough or way too much additional physical activity?</p>
       <label for="q5">Far too little / just right / far too much</label>

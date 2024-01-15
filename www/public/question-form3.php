@@ -31,4 +31,3 @@ include './src/components/templates/header.php';
 <?php
 include './src/components/templates/footer.php';
 ?>
-
