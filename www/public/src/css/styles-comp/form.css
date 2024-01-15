@@ -33,25 +33,6 @@
     text-align: center;
 }
 
-input[type="range"] {
-    -webkit-appearance: none;
-    background-color: rgba(0, 128, 0, 0.199); /* Track color */
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    
-    background: #3fcf32; /* Thumb color */
-}
-
-input[type="range"]::-webkit-slider-thumb:hover {
-    -webkit-appearance: none;
-    background: #af542a; /* Thumb color on hover */
-}
-
-input[type="range"]::-webkit-slider-thumb:active {
-    -webkit-appearance: none;
-    background: #8d1e75; /* Thumb color on click */
-}
 
 #sliderValue--q1 {
     align-self: center;

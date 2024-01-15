@@ -1,0 +1,19 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 3fr) 1fr;
+}
+
+header .btnContainer {
+    background: linear-gradient(90deg, var(--second-color), var(--fourth-color), var(--third-color));
+    padding: 30px;
+    justify-content: space-around;
+    border-bottom: 8px solid var(--grid-border-color);
+}
+
+.header__leftBox {
+
+}
+
+.header__rightBox {
+    
+}

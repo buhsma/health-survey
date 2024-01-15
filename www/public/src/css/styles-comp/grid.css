@@ -1,7 +1,9 @@
 .grid {
+    flex: 1;
     display: grid;
-    grid-template-columns: 1fr minmax(320px, 2fr) 1fr;
-    grid-template-rows: 100vh;
+    grid-template-columns: 1fr minmax(320px, 3fr) 1fr;
+    
+    height: 100%;
 }
 
 .grid__leftBox {
