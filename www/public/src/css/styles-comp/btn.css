@@ -1,0 +1,72 @@
+.btnContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.btn {
+  touch-action: manipulation;
+  background-image: linear-gradient(#4098ff, #4058ff 62%, #4075ff);
+  border: .5px solid #3247cf;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, .12) 0 1px 3px, rgba(0, 0, 0, .14) 0 1px .5px, rgba(182, 229, 255, .4) 0 1px .5px inset, rgba(23, 45, 202, .46) 0 -1px .5px inset, #233ced 0 0 0 .5px inset;
+  color: #fff;
+  font-weight: 600;
+  outline: 3px #fff;
+  outline-offset: 0;
+  position: relative;
+  text-shadow: #233ced 0 -1px .5px;
+  top: 0;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 100%;
+  padding: 12px 24px 14px;
+  width: 40%;
+
+  /* optional */
+  transition-property: outline-offset, border-color, transform;
+  transition-duration: .2s;
+}
+
+.btn:active, .btn:hover {
+  outline: 0;
+}
+
+.btn:hover {
+  background-image: linear-gradient(#40a6ff, #4058ff 62%, #4075ff);
+  box-shadow: rgba(0, 0, 0, .12) 0 2px 6px, rgba(0, 0, 0, .14) 0 1px .5px, rgba(182, 229, 255, .4) 0 1px .5px inset, rgba(23, 45, 202, .46) 0 -1px .5px inset, #233ced 0 0 0 .5px inset;
+  opacity: 1;
+
+  /* optional */
+  transform: scale(1.04);
+}
+
+.btn:active {
+  background-image: linear-gradient(#0a40ce, #4058ff 38%, #40a0ff);
+  border-color: #192ba1;
+  box-shadow: #0b1c95 0 1px inset, transparent 0 -1px .5px inset, rgba(13, 33, 176, .53) 0 2px .5px inset, rgba(35, 60, 237, .31) 0 0 0 .5px inset;
+  text-shadow: #233ced 0 1px .5px;
+
+  /* optional */
+  transform: scale(.98);
+}
+
+.back {
+    /* border: .5px solid #3247cf;
+    box-shadow: rgba(0, 0, 0, .12) 0 1px 3px, rgba(0, 0, 0, .14) 0 1px .5px, rgba(182, 229, 255, .4) 0 1px .5px inset, rgba(23, 45, 202, .46) 0 -1px .5px inset, #233ced 0 0 0 .5px inset;
+    text-shadow: #233ced 0 -1px .5px; */
+    filter: grayscale(100%)
+}
+
+.back:hover {
+    /* background-image: linear-gradient(#40a6ff, #4058ff 62%, #4075ff); */
+    filter: grayscale(100%)
+}
+
+.back:active {
+    /* background-image: linear-gradient(#0a40ce, #4058ff 38%, #40a0ff);
+    border-color: #192ba1;
+    box-shadow: #0b1c95 0 1px inset, transparent 0 -1px .5px inset, rgba(13, 33, 176, .53) 0 2px .5px inset, rgba(35, 60, 237, .31) 0 0 0 .5px inset;
+    text-shadow: #233ced 0 1px .5px; */
+    filter: grayscale(100%)
+}

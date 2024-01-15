@@ -1,0 +1,64 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.form__questionField {
+    background: linear-gradient(var(--second-color), var(--third-color));
+    display: flex;
+    flex-direction: column;
+    
+    margin: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* .form__questionField__q1 {
+    width: 80%;
+     display: flex;
+    flex-direction: column;
+}  */
+
+.form__questionField__text {
+    text-align: center;
+}
+
+.form__questionField__label--q1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: rgba(0, 128, 0, 0.199); /* Track color */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    
+    background: #3fcf32; /* Thumb color */
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    -webkit-appearance: none;
+    background: #af542a; /* Thumb color on hover */
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+    -webkit-appearance: none;
+    background: #8d1e75; /* Thumb color on click */
+}
+
+#sliderValue--q1 {
+    align-self: center;
+    color: aliceblue;
+    padding: 10px 10px;
+    background-color: var(--fourth-color);
+    border-radius: 25px;
+    border: 1px solid rgb(68, 68, 68);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}

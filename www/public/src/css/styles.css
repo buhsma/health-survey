@@ -1,5 +1,8 @@
 @import url("./styles-comp/header.css");
 @import url("./styles-comp/grid.css");
+@import url("./styles-comp/btn.css");
+@import url("./styles-comp/index.css");
+@import url("./styles-comp/form.css");
 @import url("./styles-comp/footer.css");
 
 
@@ -40,6 +43,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--second-color);
   }
 
 
