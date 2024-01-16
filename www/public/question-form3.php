@@ -28,7 +28,18 @@ include './src/components/templates/header.php';
       <p class="form__question__text">On a typical day, how many of your meals are microwaved or prepared?</p>
       <input id="q10" type="number" min="0" max="9" min="0" require name="q10" />
     </div>
-    <a href="question-form2.php">Prev</a><br><a href="results.php">Next</a>
+    <div class="form__questionField">
+      <input type="submit" value="Evaluate" />
+    </div>
+    <!-- Buttons von Ismael -->
+    <!-- <div class="btnContainer">
+      <button class="btn submitBtn" role="button">
+        <span class="text">Submit</span>
+      </button>
+      <button class="btn back" role="button">
+        <span class="text">Back</span>
+      </button> -->
+    </div>
   </form>
 </main>
 
