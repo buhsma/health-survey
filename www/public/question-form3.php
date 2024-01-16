@@ -38,8 +38,8 @@ include './src/components/templates/header.php';
       </button>
       <button class="btn back" role="button">
         <span class="text">Back</span>
-      </button> -->
-    </div>
+      </button>
+    </div> -->
   </form>
 </main>
 
