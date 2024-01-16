@@ -5,7 +5,7 @@ include './src/components/templates/header.php';
 ?>
 
 <main>
-  <form class="form" action="question-form3.php" method="POST">
+  <form class="form" action="./question-form3.php" method="POST">
     <div class="form__questionField">      <!-- Check Boxes -->
       <p class="form__question__text">What additional physical activity do you do most?</p>
       <label for="q40">None</label>
@@ -44,7 +44,7 @@ include './src/components/templates/header.php';
     <div class="form__questionField">      <!-- Slider -->
       <p class="form__question__text">Do you feel you do too little, just enough or way too much additional physical activity?</p>
       <label for="q5">Far too little / just right / far too much</label>
-      <input id="q5" type="range" min="0" max="10" name="q5" />
+      <input id="q5" type="range" min="0" max="10" value="0" name="q5" />
     </div>
     <div class="form__questionField">
       <input type="submit" value="Next questions" />
@@ -56,8 +56,8 @@ include './src/components/templates/header.php';
       </button>
       <button class="btn back" role="button">
         <span class="text">Back</span>
-      </button> -->
-    </div>
+      </button>
+    </div> -->
   </form>
 </main>
 

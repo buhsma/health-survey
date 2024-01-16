@@ -42,8 +42,8 @@ $_SESSION['q5'] = $_POST['q5']
       </button>
       <button class="btn back" role="button">
         <span class="text">Back</span>
-      </button> -->
-    </div>
+      </button>
+    </div> -->
   </form>
 </main>
 
