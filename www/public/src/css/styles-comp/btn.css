@@ -38,7 +38,7 @@
   opacity: 1;
 
   /* optional */
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .btn:active {
@@ -48,19 +48,19 @@
   text-shadow: #233ced 0 1px .5px;
 
   /* optional */
-  transform: scale(.98);
+  transform: scale(.92);
 }
 
 .back {
     /* border: .5px solid #3247cf;
     box-shadow: rgba(0, 0, 0, .12) 0 1px 3px, rgba(0, 0, 0, .14) 0 1px .5px, rgba(182, 229, 255, .4) 0 1px .5px inset, rgba(23, 45, 202, .46) 0 -1px .5px inset, #233ced 0 0 0 .5px inset;
     text-shadow: #233ced 0 -1px .5px; */
-    filter: grayscale(100%)
+    filter: grayscale(100%);
 }
 
 .back:hover {
     /* background-image: linear-gradient(#40a6ff, #4058ff 62%, #4075ff); */
-    filter: grayscale(100%)
+    filter: grayscale(100%);
 }
 
 .back:active {

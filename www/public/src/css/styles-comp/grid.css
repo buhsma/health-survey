@@ -1,20 +1,22 @@
 .grid {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr minmax(320px, 3fr) 1fr;
+    grid-template-columns: 1fr minmax(290px, 3fr) 1fr;
     
     height: 100%;
 }
 
 .grid__leftBox {
-    
+    position: relative;
     background: linear-gradient(90deg, var(--second-color), var(--third-color));
-    border-right: 8px solid var(--grid-border-color);
+    border-right: var(--layout-border-width) solid var(--grid-border-color);
     
 }
 
+
 .grid__rightBox {
+    position: relative;
     background: linear-gradient(270deg, var(--second-color), var(--third-color));
-    border-left: 8px solid var(--grid-border-color);
+    border-left: var(--layout-border-width) solid var(--grid-border-color);
 }
 

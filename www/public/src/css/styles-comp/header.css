@@ -1,19 +1,53 @@
 header {
     display: grid;
-    grid-template-columns: 1fr minmax(320px, 3fr) 1fr;
+    grid-template-columns: 1fr minmax(290px, 3fr) 1fr;
 }
 
 header .btnContainer {
-    background: linear-gradient(90deg, var(--second-color), var(--fourth-color), var(--third-color));
-    padding: 30px;
-    justify-content: space-around;
-    border-bottom: 8px solid var(--grid-border-color);
+    background: linear-gradient(90deg, var(--third-color), var(--second-color), var(--third-color));
+    padding: 30px 10px;
+    justify-content: space-between;
+    border-bottom: var(--layout-border-width) solid var(--grid-border-color);
+}
+
+header .btnContainer .btn {
+    min-width: 120px;
 }
 
 .header__leftBox {
+position: relative;
+background: linear-gradient(270deg, var(--third-color), var(--second-color));
+}
 
+.header__leftBox::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: var(--layout-border-width);
+    height: var(--layout-border-width);
+    background-color: var(--grid-border-color);
+    border-top-left-radius: 15px;
+    z-index: 3;
 }
 
 .header__rightBox {
+    position: relative;
+    background: linear-gradient(270deg, var(--second-color), var(--third-color));
+}
+
+.header__rightBox::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: var(--layout-border-width);
+    height: var(--layout-border-width);
+    background-color: var(--grid-border-color);
+    border-top-right-radius: 15px;
+    z-index: 3;
+}
+
+header .btnContainer {
     
 }
