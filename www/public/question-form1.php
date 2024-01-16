@@ -20,7 +20,7 @@ include './src/components/templates/header.php';
       <!-- Output -->
     </div>
     <div class="form__questionField">
-      <input type="submit" value="Next questions" />
+      <input type="submit" value="Next questions"/>
     </div>
     <!-- Buttons von Ismael -->
     <!-- <div class="btnContainer">

@@ -7,7 +7,7 @@ include './src/components/templates/header.php';
 <main>
     <h1>Health Survey</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore veritatis accusamus. Praesentium voluptate, reprehenderit enim eligendi totam blanditiis perspiciatis omnis natus veniam, repellendus amet, sit saepe odio architecto quasi.</p>
-    <form action="" class="form">
+    <form action="" class="form" method="POST">
         <div class="form__questionField">
             <p class="form__questionField__text">How healthy are you physically?</p>
             <!-- <label class="form__questionField__label--q1" for="q1">

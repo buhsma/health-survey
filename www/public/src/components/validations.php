@@ -11,58 +11,86 @@
 //     {
 //       $errMessage = "Gimme input";
 //     }
-// } 
-
-if (!isset($_SESSION['results'])) {
-  $_SESSION['results'] = [];
-}
-
-//q1
+// } $_SESSION['q5'] = $_POST['q5']
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  if (isset($_POST["q1"]) && $_POST["q1"] > 0) {
-      $q1 = $_POST['q1'];
-      resultsArrFunk('q1');
-  }
-  else {
-    $errMessage = "q1 nothappy";
+
+  foreach ($_POST as $key => $value) {
+
+  switch ($key) {
+    case 'q1':
+    case 'q3':
+    case 'q5':
+      sliderVali($key);
+      break;
+    
+    case 'q2':
+      yesNo($key);
+      break;
+
+    case 'q4':
+      checkboxes($key);
+      break;
+    
+    default:
+      dailyIntake($key);
+      break;
+    }
+
+}
+}
+
+//q1, q3, q5
+function sliderVali($key) {
+  global $errMessage;
+
+  if (isset($_POST[$key]) && $_POST[$key] > 0) {
+      $_SESSION[$key] = $_POST[$key];
+  } else {
+      $errMessage = [$key, "Please adjust the slider to your liking."];
   }
 }
+
 
 //q2
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
+function yesNo($key) {
   if (isset($_POST["q2"])) {
-    resultsArrFunk('q2');
+    $_SESSION[$key] = $_POST[$key];
   }
 }
 
-//q3
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  if (isset($_POST["q3"]) && $_POST["q3"] > 0) {
-      $q1 = $_POST['q3'];
-      resultsArrFunk('q3');
+
+//q4
+function checkboxes($key) {
+  if (isset($_POST[$key]) && !isset($_POST[$key][0])) {
+      $checkedArray = array_map('isset', $_POST[$key]);
+      $q4Sum = array_sum($checkedArray);
+      $_SESSION[$key] = $q4Sum;
+  }
+
+  else if (isset($_POST[$key]) && isset($_POST[$key][0])) {
+    $_SESSION[$key] = 0;
+  }
+
+  else {
+    $errMessage = [$key, "Please check at least one box."];
+  }
+}
+
+//q6, q7, q8, q9, q10
+function dailyIntake($key) {
+  if (isset($_POST[$key]) && is_numeric($_POST[$key]) && $_POST[$key] >= 0 && $_POST[$key] <10) {
+    $_SESSION[$key] = $_POST[$key];
   }
   else {
-    $errMessage = "q3 nothappy";
+    $errMessage = [$key, "Please input a number 0-9."];
   }
 }
 
 
 
 
-function resultsArrFunk($key) {
-  global $$key;
-
-  if (isset($$key)) {
-      $_SESSION['results'][$key] = $$key;
-  }
-}
-
-
-
-
-
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Lösche alle Session Daten
-    session_unset();
-    // Zerstöre die Session
-    session_destroy(); } 
+// if($_SERVER['REQUEST_METHOD'] === 'POST') {
+//     // Lösche alle Session Daten
+//     session_unset();
+//     // Zerstöre die Session
+//     session_destroy(); } 
