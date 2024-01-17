@@ -35,13 +35,11 @@ include './src/components/templates/header.php';
         <span class="text">Back</span>
       </button>
     </div> -->
-    <script src="/src/js/validate.js"></script>
     <?php 
       include './src/components/submit-nav-btn.php'; 
     ?>
 
   </form>
-  <!-- <script src="/src/js/validate.js"></script> -->
 </main>
 
 <?php
