@@ -1,6 +1,7 @@
 <?php
 
-
+include './src/components/displayError.php';
+include './src/components/redirect.php';
 // if($_SERVER['REQUEST_METHOD'] === 'POST') {
 //   if (($_POST["q1"]) < 0)
 //     {
@@ -45,8 +46,11 @@ function sliderVali($key) {
 
   if (isset($_POST[$key]) && $_POST[$key] > 0) {
       $_SESSION[$key] = $_POST[$key];
+      colog('q1 is fine');
   } else {
-      $errMessage = [$key, "Please adjust the slider to your liking."];
+      displayError($key, "Please adjust the slider to your liking.");
+      colog('q1 not ok');
+      redirect();
   }
 }
 
@@ -54,7 +58,7 @@ function sliderVali($key) {
 //q2
 function yesNo($key) {
   if (isset($_POST["q2"])) {
-    $_SESSION[$key] = $_POST[$key];
+    $_SESSION[$key] = $_POST[$key]; 
   }
 }
 
@@ -72,7 +76,8 @@ function checkboxes($key) {
   }
 
   else {
-    $errMessage = [$key, "Please check at least one box."];
+    displayError($key, "Please check at least one box.");
+    redirect();
   }
 }
 
@@ -82,7 +87,8 @@ function dailyIntake($key) {
     $_SESSION[$key] = $_POST[$key];
   }
   else {
-    $errMessage = [$key, "Please input a number 0-9."];
+    displayError($key, "Please input a number 0-9.");
+    redirect();
   }
 }
 

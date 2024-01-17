@@ -1,5 +1,6 @@
 <?php
 $pageTitle = "Question Form 1";
+$nextPage = 'question-form1.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
 ?>
@@ -35,6 +36,10 @@ include './src/components/templates/header.php';
       </button>
     </div> -->
     <script src="/src/js/validate.js"></script>
+    <?php 
+      include './src/components/submit-nav-btn.php'; 
+    ?>
+
   </form>
 </main>
 

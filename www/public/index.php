@@ -1,7 +1,10 @@
 <?php
 $pageTitle = "Start Survey";
+$nextPage = 'question-form1.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
+$_SESSION['previous_page'] = $_SERVER['PHP_SELF'];
+$previousPage = 'question-form1.php';
 ?>
 
 <main>
@@ -15,11 +18,12 @@ include './src/components/templates/header.php';
                 <output class="slider" for="q1" id="sliderValue--q1">0</output>
             </label> -->
         </div>
+
         <div class="container">
   
             <div class="range-slider">
                 <span id="rs-bullet" class="rs-label">Need inpt</span>
-                <input id="rs-range-line" class="rs-range" list="ratingList" type="range" value="0" min="0" max="5">
+                <input id="rs-range-line" class="rs-range" list="ratingList" type="range" value="0" min="0" max="5" name="q1">
                 <datalist id="ratingList">
                         <option value="1">Not Healthy</option>
                         <option value="2">Slightly Healthy</option>
@@ -27,23 +31,19 @@ include './src/components/templates/header.php';
                         <option value="4">Very Healthy</option>
                         <option value="5">Extremely Healthy</option>
                 </datalist>
-        </div>
+            </div>
   
-  <div class="box-minmax">
-    <span>badbad</span><span>supadupa</span>
-  </div>
-  
-</div>
-        <div class="btnContainer">
-            <button class="btn submitBtn" role="button">
-                <span class="text">Submit</span>
-            </button>
-            <button class="btn back" role="button">
-                <span class="text">Back</span>
-            </button>
+            <div class="box-minmax">
+                <span>badbad</span><span>supadupa</span>
+            </div>
+    
         </div>
 
-  
+        <?php 
+            include './src/components/submit-nav-btn.php'; 
+            print_r (get_included_files());
+        ?>
+        <p id="warning1"></p>
     </form>
     <!-- <script>
     function updateSliderValue(value) {

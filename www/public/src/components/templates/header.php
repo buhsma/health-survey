@@ -17,9 +17,11 @@
 <div class="grid__leftBox"></div>
 
 <?php
+include './src/components/validations.php';
+
 // Wenn die Session noch nicht gestartet wurde, starte sie.
 if(session_status() === PHP_SESSION_NONE) {
     // Starte die Session
     session_start();
 }
-?>
+?>  

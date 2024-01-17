@@ -58,6 +58,9 @@ include './src/components/templates/header.php';
         <span class="text">Back</span>
       </button>
     </div> -->
+    <?php 
+      include './src/components/submit-nav-btn.php'; 
+    ?>
   </form>
 </main>
 

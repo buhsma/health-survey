@@ -44,6 +44,9 @@ $_SESSION['q5'] = $_POST['q5']
         <span class="text">Back</span>
       </button>
     </div> -->
+    <?php 
+      include './src/components/submit-nav-btn.php'; 
+    ?>
   </form>
 </main>
 
