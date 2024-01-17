@@ -16,6 +16,17 @@ function validateSlider(sliderId, warningId) { // von Chris, von mir ergänzt
   return true;
 }
 
+function validateForm0() {
+  event.preventDefault();
+  // Eingabe 1
+  if (!validateSlider('q1', 'warning1')) {
+    return false;
+  } 
+  else {
+    document.getElementById('form0').submit();
+  }
+}
+
 function validateRadio() {
   let option1 = document.getElementById('q2y').checked;
   let option2 = document.getElementById('q2n').checked;

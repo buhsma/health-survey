@@ -10,17 +10,17 @@ $previousPage = 'question-form1.php';
 <main>
     <h1>Health Survey</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore veritatis accusamus. Praesentium voluptate, reprehenderit enim eligendi totam blanditiis perspiciatis omnis natus veniam, repellendus amet, sit saepe odio architecto quasi.</p>
-    <form action="" class="form" method="POST">
+    <form class="form" method="POST" action="./question-form1.php" onsubmit="validateForm0()" id="form0">
         <div class="form__questionField">
             <p class="form__questionField__text">How healthy are you physically?</p>
-            <!-- <label class="form__questionField__label--q1" for="q1">
-                <input type="range" id="q1" name="rating" min="0" max="5" value="0" step="1" class="form__questionField__q1" oninput="updateSliderValue(this.value)">
-                <output class="slider" for="q1" id="sliderValue--q1">0</output>
-            </label> -->
+            <label class="form__questionField__label--q1" for="q1">0 / Not healthy - Very healthy</label>
+            <input type="range" id="q1" name="rating" min="0" max="10" value="0" step="1" class="form__questionField__q1" >
+            <!-- <input type="range" id="q1" name="rating" min="0" max="10" value="0" step="1" class="form__questionField__q1" oninput="updateSliderValue(this.value)"> -->
+            <!-- <output class="slider" for="q1" id="sliderValue--q1">0</output> -->
             <p id="warning1" class="validation-warning"></p>    
         </div>
 
-        <div class="container">
+        <!-- <div class="container">
   
             <div class="range-slider">
                 <span id="rs-bullet" class="rs-label">Need inpt</span>
@@ -38,13 +38,15 @@ $previousPage = 'question-form1.php';
                 <span>badbad</span><span>supadupa</span>
             </div>
     
+        </div> -->
+        <div class="form__questionField">
+            <input type="submit" value="Next questions"/>
         </div>
-
-        <?php 
+            <?php 
             include './src/components/submit-nav-btn.php'; 
             print_r (get_included_files());
         ?>
-        <p id="warning1"></p>
+
     </form>
     <!-- <script>
     function updateSliderValue(value) {
