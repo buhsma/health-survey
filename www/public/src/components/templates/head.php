@@ -7,6 +7,6 @@
 
     <link rel="stylesheet" href="./src/css/styles.css">
     <script src="/src/js/slider.js" defer></script>
-    <script src="/www/public/src/js/validate.js" defer></script>
+    <script src="/src/js/validate.js" defer></script>
 </head>
 

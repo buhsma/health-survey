@@ -14,6 +14,7 @@ include './src/components/templates/header.php';
                 <input type="range" id="q1" name="rating" min="0" max="5" value="0" step="1" class="form__questionField__q1" oninput="updateSliderValue(this.value)">
                 <output class="slider" for="q1" id="sliderValue--q1">0</output>
             </label> -->
+            <p id="warning1" class="validation-warning"></p>    
         </div>
         <div class="container">
   

@@ -13,21 +13,21 @@ include './src/components/templates/header.php';
       <label for="q2n">No</label>
       <input id="q2n" type="radio" value="no" name="q2">
       <!-- Warn-Hinweis -->
-      <p id="warning1"></p>    
+      <p id="warning2" class="validation-warning"></p>    
     </div>
     <div class="form__questionField">      <!-- Slider -->
       <p class="form__question__text">How important is physical activity to you?</p>
       <label for="q3">0 / Not at all - Very much</label>
       <input id="q3" type="range" min="0" max="10" step="1" value="0" name="q3" />
       <!-- Warn-Hinweis -->
-      <p id="warning2"></p>
+      <p id="warning3" class="validation-warning"></p>
     </div>
     <div class="form__questionField">
       <input type="submit" value="Next questions"/>
     </div>
     <!-- Buttons von Ismael -->
-    <script src="/src/js/validate.js"></script>
   </form>
+  <!-- <script src="/src/js/validate.js"></script> -->
 </main>
 
 <?php
