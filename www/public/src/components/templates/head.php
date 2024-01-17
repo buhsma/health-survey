@@ -6,7 +6,7 @@
     <title><?php echo $pageTitle; ?></title>
 
     <link rel="stylesheet" href="./src/css/styles.css">
-    <script src="/src/js/slider.js" defer></script>
+    <!-- <script src="/src/js/slider.js" defer></script> -->
     <script src="/src/js/validate.js" defer></script>
 </head>
 

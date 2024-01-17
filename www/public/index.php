@@ -4,7 +4,7 @@ $nextPage = 'question-form1.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
 $_SESSION['previous_page'] = $_SERVER['PHP_SELF'];
-$previousPage = 'question-form1.php';
+$previousPage = 'question-form1.php';   
 ?>
 
 <main>
@@ -22,7 +22,7 @@ $previousPage = 'question-form1.php';
 
         <!-- <div class="container">
   
-            <div class="range-slider">
+            <!-- <div class="range-slider">
                 <span id="rs-bullet" class="rs-label">Need inpt</span>
                 <input id="rs-range-line" class="rs-range" list="ratingList" type="range" value="0" min="0" max="5" name="q1">
                 <datalist id="ratingList">
@@ -36,7 +36,7 @@ $previousPage = 'question-form1.php';
   
             <div class="box-minmax">
                 <span>badbad</span><span>supadupa</span>
-            </div>
+            </div> -->
     
         </div> -->
         <div class="form__questionField">

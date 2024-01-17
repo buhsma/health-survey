@@ -16,7 +16,7 @@ include './src/components/redirect.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   foreach ($_POST as $key => $value) {
-
+    colog($key);
   switch ($key) {
     case 'q1':
     case 'q3':
@@ -43,14 +43,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 //q1, q3, q5
 function sliderVali($key) {
   global $errMessage;
-
+  if (isset($_POST[$key])) {
+    colog('isset');}
+    else {
+    colog('isnotset');
+    }
+  
   if (isset($_POST[$key]) && $_POST[$key] > 0) {
       $_SESSION[$key] = $_POST[$key];
       colog('q1 is fine');
   } else {
-      displayError($key, "Please adjust the slider to your liking.");
-      colog('q1 not ok');
       redirect();
+      displayError($key, "Please adjust the slider to your liking.");
+      colog('q1 not ok'); 
   }
 }
 
@@ -76,8 +81,8 @@ function checkboxes($key) {
   }
 
   else {
-    displayError($key, "Please check at least one box.");
     redirect();
+    displayError($key, "Please check at least one box.");
   }
 }
 
@@ -87,8 +92,8 @@ function dailyIntake($key) {
     $_SESSION[$key] = $_POST[$key];
   }
   else {
-    displayError($key, "Please input a number 0-9.");
     redirect();
+    displayError($key, "Please input a number 0-9.");
   }
 }
 

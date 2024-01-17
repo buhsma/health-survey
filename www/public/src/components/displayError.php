@@ -1,13 +1,13 @@
 <?php
-
 function displayError($key, $errorMessage) {
-    
-    $classNumber = preg_replace('/[^0-9]/', '', $key);
+    colog('start error');
+    $idNumber = preg_replace('/[^0-9]/', '', $key);
 
-    $className = 'warning' . $classNumber;
+    $idName = 'warning' . $idNumber;
 
-    echo "<div class='$className'>$errorMessage</div>";
+    echo "<div id='$idName'>$errorMessage</div>";
+    colog($idNumber);
 }
-
+?>
 
 
