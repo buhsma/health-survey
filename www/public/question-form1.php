@@ -26,14 +26,6 @@ include './src/components/templates/header.php';
       <input type="submit" value="Next questions"/>
     </div>
     <!-- Buttons von Ismael -->
-    <!-- <div class="btnContainer">
-      <button class="btn submitBtn" role="button">
-        <span class="text">Submit</span>
-      </button>
-      <button class="btn back" role="button">
-        <span class="text">Back</span>
-      </button>
-    </div> -->
     <script src="/src/js/validate.js"></script>
   </form>
 </main>
