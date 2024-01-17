@@ -49,17 +49,10 @@ include './src/components/templates/header.php';
       <p id="warning5" class="validation-warning"></p>
     </div>
     <div class="form__questionField">
+      <input type="hidden" id="h2" name="hidden" value="question-form2.php">
       <input type="submit" value="Next questions" />
     </div>
     <!-- Buttons von Ismael -->
-    <!-- <div class="btnContainer">
-      <button class="btn submitBtn" role="button">
-        <span class="text">Submit</span>
-      </button>
-      <button class="btn back" role="button">
-        <span class="text">Back</span>
-      </button>
-    </div> -->
     <?php 
       include './src/components/submit-nav-btn.php'; 
     ?>

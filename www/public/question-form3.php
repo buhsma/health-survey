@@ -38,17 +38,10 @@ $_SESSION['q5'] = $_POST['q5']
       <p id="warning10" class="validation-warning"></p>
     </div>
     <div class="form__questionField">
+      <input type="hidden" id="h3" name="hidden" value="question-form3.php">
       <input type="submit" value="Evaluate" />
     </div>
     <!-- Buttons von Ismael -->
-    <!-- <div class="btnContainer">
-      <button class="btn submitBtn" role="button">
-        <span class="text">Submit</span>
-      </button>
-      <button class="btn back" role="button">
-        <span class="text">Back</span>
-      </button>
-    </div> -->
     <?php 
       include './src/components/submit-nav-btn.php'; 
     ?>
