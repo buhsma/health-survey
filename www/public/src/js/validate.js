@@ -56,11 +56,6 @@ function validateForm1() {
 
 function validateForm2() {
   event.preventDefault();
-  // Eingabe 4
-  // if (!validateRadio()) {
-  //   return false;
-  // } 
-  // else 
   // Eingabe 5
   if (!validateSlider('q5', 'warning5')) {
     return false;
@@ -71,9 +66,9 @@ function validateForm2() {
 }
 
 function validateNumber(numberId, warningId) {
-  let numberInput = document.getElementById(numberId);
-  console.log(numberInput.value);
-  if (isNaN(numberInput)) { // IMMER: numberInput ist ein String!!!!!!!
+  let numberInput = document.getElementById(numberId).value;
+  // console.log(numberInput.value);
+  if (!numberInput) {
     setWarning(warningId, "Please input!");
     return false;
   }
