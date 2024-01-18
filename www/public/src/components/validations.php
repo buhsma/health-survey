@@ -100,11 +100,13 @@ function yesNo($key, $value) {
 //q4
 function checkboxes($key, $value) {
   $counter = 0;
-  if (isset($_POST[$key])) {
+  if (!empty($_POST[$key])) {
   foreach($_POST[$key] as $chbox) { 
             $counter++;
           }
-         } 
+         }
+
+  
          $_SESSION['results'][$key] = $counter;
         }
     

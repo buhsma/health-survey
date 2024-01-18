@@ -12,7 +12,7 @@ $currPage = $_SERVER["SCRIPT_NAME"];
 foreach ($navLogic as $key => $value) {
     if (strpos($currPage, $key) !== false) {
         header("Location: $value");
-        // exit();
+        exit();
                     }
                 }
             
