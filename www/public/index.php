@@ -4,13 +4,13 @@ $nextPage = 'question-form1.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
 $_SESSION['previous_page'] = $_SERVER['PHP_SELF'];
-$previousPage = 'question-form1.php';   
+$previousPage = 'none';   
 ?>
 
 <main>
     <h1>Health Survey</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore veritatis accusamus. Praesentium voluptate, reprehenderit enim eligendi totam blanditiis perspiciatis omnis natus veniam, repellendus amet, sit saepe odio architecto quasi.</p>
-    <form class="form" method="POST" action="./question-form1.php" onsubmit="validateForm0()" id="form0">
+    <form class="form" method="POST" action="./question-form1.php"  id="form0" onsubmit="validateForm0()" >
         <div class="form__questionField">
             <p class="form__questionField__text">How healthy are you physically?</p>
             <label class="form__questionField__label--q1" for="q1">0 / Not healthy - Very healthy</label>
@@ -38,14 +38,15 @@ $previousPage = 'question-form1.php';
                 <span>badbad</span><span>supadupa</span>
             </div>
     
-        </div> -->
+        </div>
         <div class="form__questionField">
             <input type="hidden" id="h0" name="hidden" value="index.php">
             <input type="submit" value="Next questions"/>
+            <input type="hidden" name="formType" value="form0">
         </div>
             <?php 
             include './src/components/submit-nav-btn.php'; 
-            print_r (get_included_files());
+            // print_r (get_included_files());
         ?>
 
     </form>

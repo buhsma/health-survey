@@ -53,6 +53,7 @@ include './src/components/templates/header.php';
       <input type="hidden" id="h2" name="hidden" value="question-form2.php">
       <input type="submit" value="Next questions" />
     </div>
+    <input type="hidden" name="formType" value="form2">
     <!-- Buttons von Ismael -->
     <?php 
       include './src/components/submit-nav-btn.php'; 

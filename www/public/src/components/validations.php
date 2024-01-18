@@ -2,55 +2,83 @@
 
 include './src/components/displayError.php';
 include './src/components/redirect.php';
-// if($_SERVER['REQUEST_METHOD'] === 'POST') {
-//   if (($_POST["q1"]) < 0)
-//     {
-//       $q1 = $_POST['q1'];
-//       resultsArrFunk($q1);
-//     } 
-//     else 
-//     {
-//       $errMessage = "Gimme input";
-//     }
-// } $_SESSION['q5'] = $_POST['q5']
+
+
+if(session_status() === PHP_SESSION_NONE) {
+  // Starte die Session
+  session_start();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// print_r($_POST);
+// colog('$_POST');
+
+// Get the form type from the hidden input
+$formType = isset($_POST['formType']) ? $_POST['formType'] : '';
+
+// Define the expected keys for each form type
+$expectedKeys = [
+    'form0' => ['q1'],
+    'form1' => ['q2', 'q3'],
+    'form2' => ['q4', 'q5'],
+    'form3' => ['q6', 'q7', 'q8', 'q9', 'q10'],
+];
+
+// Check if the form type is valid
+if (isset($expectedKeys[$formType])) {
+    // Loop through each expected key for the specific form type
+    foreach ($expectedKeys[$formType] as $key) {
+        // Initialize the key only if it's not present in the form
+        if (!isset($_POST[$key])) {
+            $_POST[$key] = '';
+        }
+    }
+}
+
+print_r($_POST);
+colog('$_POST');
+
+
+
+
 
   foreach ($_POST as $key => $value) {
-    colog($key);
-  switch ($key) {
-    case 'q1':
-    case 'q3':
-    case 'q5':
-      sliderVali($key);
-      break;
-    
-    case 'q2':
-      yesNo($key);
-      break;
+      // Sanitize user input
+      // $value = htmlspecialchars($value);
 
-    case 'q4':
-      checkboxes($key);
-      break;
-    
-    default:
-      dailyIntake($key);
-      break;
-    }
+      if ($key !== 'formType') {
+      // Perform validation based on the key
+      switch ($key) {
+          case 'q1':
+          case 'q3':
+          case 'q5':
+              sliderVali($key, $value);
+              break;
 
+          case 'q2':
+              yesNo($key, $value);
+              break;
+
+          case 'q4':
+              checkboxes($key, $value);
+              break;
+
+          default:
+              dailyIntake($key, $value);
+              break;
+      }
+  }
 }
+print_r($_SESSION['results']);
 }
 
 //q1, q3, q5
-function sliderVali($key) {
-  global $errMessage;
-  if (isset($_POST[$key])) {
-    colog('isset');}
-    else {
-    colog('isnotset');
-    }
+function sliderVali($key, $value) {
   
-  if (isset($_POST[$key]) && $_POST[$key] > 0) {
-      $_SESSION[$key] = $_POST[$key];
+    //sliderVali like this: if (isset($_POST[$key]) && intval($_POST[$key]))
+    // breaks POST for no obvius reason
+  if (intval($value) != 0) {
+    $_SESSION['results'][$key] = $value;
       colog('q1 is fine');
   } else {
       redirect();
@@ -61,19 +89,21 @@ function sliderVali($key) {
 
 
 //q2
-function yesNo($key) {
-  if (isset($_POST["q2"])) {
-    $_SESSION[$key] = $_POST[$key]; 
+function yesNo($key, $value) {
+  if ($value) {
+    $_SESSION['results'][$key] = $value;
   }
 }
 
 
 //q4
-function checkboxes($key) {
+function checkboxes($key, $value) {
   if (isset($_POST[$key]) && !isset($_POST[$key][0])) {
-      $checkedArray = array_map('isset', $_POST[$key]);
-      $q4Sum = array_sum($checkedArray);
-      $_SESSION[$key] = $q4Sum;
+      $counter = 0;
+      foreach($_POST[$key] as $chbox) {
+        $counter++;
+      }
+      $_SESSION[$key] = $counter;
   }
 
   else if (isset($_POST[$key]) && isset($_POST[$key][0])) {
@@ -87,9 +117,9 @@ function checkboxes($key) {
 }
 
 //q6, q7, q8, q9, q10
-function dailyIntake($key) {
-  if (isset($_POST[$key]) && is_numeric($_POST[$key]) && $_POST[$key] >= 0 && $_POST[$key] <10) {
-    $_SESSION[$key] = $_POST[$key];
+function dailyIntake($key, $value) {
+  if (is_numeric($value) && $value >= 0 && $value <10) {
+    $_SESSION['results'][$key] = $value;
   }
   else {
     redirect();
@@ -100,8 +130,6 @@ function dailyIntake($key) {
 
 
 
-// if($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     // Lösche alle Session Daten
-//     session_unset();
-//     // Zerstöre die Session
-//     session_destroy(); } 
+
+
+?>

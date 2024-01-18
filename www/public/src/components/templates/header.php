@@ -18,7 +18,7 @@
 
 <?php
 include './src/components/validations.php';
-
+// $previousPage = isset($_SESSION['previous_page']) ? $_SESSION['previous_page'] : 'index.php';
 // Wenn die Session noch nicht gestartet wurde, starte sie.
 if(session_status() === PHP_SESSION_NONE) {
     // Starte die Session
