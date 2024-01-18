@@ -4,7 +4,7 @@ header {
 }
 
 header .btnContainer {
-    background: linear-gradient(90deg, var(--third-color), var(--second-color), var(--third-color));
+    background: linear-gradient(90deg, var(--third-color), var(--fourth-color), var(--third-color));
     padding: 30px 10px;
     justify-content: space-between;
     border-bottom: var(--layout-border-width) solid var(--grid-border-color);

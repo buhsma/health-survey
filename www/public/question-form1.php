@@ -4,9 +4,9 @@ $nextPage = 'question-form1.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
 ?>
-<!-- onsubmit="validateForm1()"  -->
+
 <main>
-  <form class="form" action="./question-form2.php" method="POST" id="form1">
+  <form class="form" action="./question-form2.php" method="POST" id="form1" onsubmit="validateForm1()" >
     <div class="form__questionField">      <!-- Check Radio -->
       <p class="form__question__text">Do you take nutritional supplements?</p>
       <div class="form__questionField__input">
@@ -27,12 +27,13 @@ include './src/components/templates/header.php';
       <!-- Warn-Hinweis -->
       <p id="warning3" class="validation-warning"></p>
     </div>
-    <div class="form__questionField">
+    
+    <!-- <div class="form__questionField">
       <input type="hidden" id="h1" name="hidden" value="question-form1.php">
       <input type="submit" value="Next questions"/>
       <input type="hidden" name="formType" value="form1">
-    </div>
-    <!-- Buttons von Ismael -->
+    </div> -->
+
     <?php 
       include './src/components/submit-nav-btn.php'; 
     ?>

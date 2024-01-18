@@ -21,5 +21,7 @@ question-form2.php,
 question-form3.php,
 validate.js,
 validation.css
+footer.php
+footer.css
 
 ### Ismaels Dateien

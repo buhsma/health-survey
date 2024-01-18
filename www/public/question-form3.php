@@ -37,12 +37,13 @@ include './src/components/templates/header.php';
       <input id="q10" type="number" min="0" max="9" min="0" require name="q10" />
       <p id="warning10" class="validation-warning"></p>
     </div>
-    <div class="form__questionField">
+
+    <!-- <div class="form__questionField">
       <input type="hidden" id="h3" name="hidden" value="question-form3.php">
       <input type="submit" value="Evaluate" />
       <input type="hidden" name="formType" value="form3">
-    </div>
-    <!-- Buttons von Ismael -->
+    </div> -->
+
     <?php 
       include './src/components/submit-nav-btn.php'; 
     ?>

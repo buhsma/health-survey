@@ -51,8 +51,8 @@ include './src/components/templates/header.php';
       <div class="form__questionField__input">
         <input id="q410" type="checkbox" name="q4[10]" value="other" />
         <label for="q410">Other</label>
-        <p id="warning4" class="validation-warning"></p>
       </div>
+      <p id="warning4" class="validation-warning"></p>
     </div>
     <div class="form__questionField">      <!-- Slider -->
       <p class="form__question__text">Do you feel you do too little, just enough or way too much additional physical activity?</p>
@@ -60,12 +60,14 @@ include './src/components/templates/header.php';
       <input id="q5" type="range" min="0" max="5" value="0" name="q5" />
       <p id="warning5" class="validation-warning"></p>
     </div>
-    <div class="form__questionField">
+    
+    <!-- <div class="form__questionField">
       <input type="hidden" id="h2" name="hidden" value="question-form2.php">
       <input type="submit" value="Next questions" />
-    </div>
+    </div> -->
+    
     <input type="hidden" name="formType" value="form2">
-    <!-- Buttons von Ismael -->
+
     <?php 
       include './src/components/submit-nav-btn.php'; 
     ?>
