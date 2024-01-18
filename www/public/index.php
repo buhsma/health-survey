@@ -38,7 +38,7 @@ $previousPage = 'none';
                 <span>badbad</span><span>supadupa</span>
             </div>
     
-        </div>
+        </div>-->
         <div class="form__questionField">
             <input type="hidden" id="h0" name="hidden" value="index.php">
             <input type="submit" value="Next questions"/>
@@ -50,11 +50,11 @@ $previousPage = 'none';
         ?>
 
     </form>
-    <!-- <script>
+    <script>
     function updateSliderValue(value) {
         document.getElementById('sliderValue--q1').innerHTML = value;
     }
-    </script> -->
+    </script>
     
 </main> 
 

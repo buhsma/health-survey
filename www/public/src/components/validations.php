@@ -46,7 +46,7 @@ colog('$_POST');
       // Sanitize user input
       // $value = htmlspecialchars($value);
 
-      if ($key !== 'formType') {
+      if ($key !== 'formType' && $key !== 'hidden') {
       // Perform validation based on the key
       switch ($key) {
           case 'q1':
@@ -81,9 +81,10 @@ function sliderVali($key, $value) {
     $_SESSION['results'][$key] = $value;
       colog('q1 is fine');
   } else {
+      colog('q1 not ok'); 
       redirect();
       displayError($key, "Please adjust the slider to your liking.");
-      colog('q1 not ok'); 
+      
   }
 }
 
@@ -98,23 +99,33 @@ function yesNo($key, $value) {
 
 //q4
 function checkboxes($key, $value) {
-  if (isset($_POST[$key]) && !isset($_POST[$key][0])) {
-      $counter = 0;
-      foreach($_POST[$key] as $chbox) {
-        $counter++;
-      }
-      $_SESSION[$key] = $counter;
-  }
+  $counter = 0;
+  if (isset($_POST[$key])) {
+  foreach($_POST[$key] as $chbox) { 
+            $counter++;
+          }
+         } 
+         $_SESSION['results'][$key] = $counter;
+        }
+    
+// function checkboxes($key, $value) {
+//   if (isset($_POST[$key]) && !isset($_POST[$key][0])) {
+//       $counter = 0;
+//       foreach($_POST[$key] as $chbox) {
+//         $counter++;
+//       }
+//       $_SESSION[$key] = $counter;
+//   }
 
-  else if (isset($_POST[$key]) && isset($_POST[$key][0])) {
-    $_SESSION[$key] = 0;
-  }
+//   else if (isset($_POST[$key]) && isset($_POST[$key][0])) {
+//     $_SESSION[$key] = 0;
+//   }
 
-  else {
-    redirect();
-    displayError($key, "Please check at least one box.");
-  }
-}
+//   else {
+//     redirect();
+//     displayError($key, "Please check at least one box.");
+//   }
+// }
 
 //q6, q7, q8, q9, q10
 function dailyIntake($key, $value) {
