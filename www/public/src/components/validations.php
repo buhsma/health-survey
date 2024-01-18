@@ -35,8 +35,8 @@ if (isset($expectedKeys[$formType])) {
     }
 }
 
-print_r($_POST);
-colog('$_POST');
+// print_r($_POST);
+// colog('$_POST');
 
 
 
@@ -69,7 +69,7 @@ colog('$_POST');
       }
   }
 }
-print_r($_SESSION['results']);
+// print_r($_SESSION['results']);
 }
 
 //q1, q3, q5
