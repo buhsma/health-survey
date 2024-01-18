@@ -24,7 +24,7 @@ foreach (QUESTIONS as $i => $data) { // In $data kommen die Originaldaten einer 
 
     // Je nach Fragetyp: Bestimme den vom Benutzer gewählten Antwort-Wert.
     $value = 0;
-
+points
     switch($data["type"]) {
         case "range": // ----------------------------------------
             $value = $userPost["range-slider"];

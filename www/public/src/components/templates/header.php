@@ -3,10 +3,10 @@
 <header>
         <div class="header__leftBox"></div>
         <div class="btnContainer">
-            <button class="btn back" role="button">
+            <button class="btn back" role="button" onclick="window.location.href='fitAndWell.php'" >
                 <span class="text">Fit&Well</span>
             </button>
-            <button class="btn back" role="button">
+            <button class="btn back" role="button" onclick="window.location.href='index.php'">
                 <span class="text">Reset Survey</span>
             </button>
         </div>
