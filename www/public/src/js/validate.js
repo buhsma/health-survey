@@ -32,7 +32,7 @@ function validateRadio() {
   let option2 = document.getElementById('q2n').checked;
   // let answer1 = document.getElementById('q2').value;
   if (!option1 && !option2) {
-    setWarning('warning2', "Please input!");
+    setWarning('warning2', "Please choose!");
     return false;
   }
   setWarning('warning2', "");
@@ -69,7 +69,7 @@ function validateNumber(numberId, warningId) {
   let numberInput = document.getElementById(numberId).value;
   // console.log(numberInput.value);
   if (!numberInput) {
-    setWarning(warningId, "Please input!");
+    setWarning(warningId, "Please fill in!");
     return false;
   }
   setWarning(warningId, "");
