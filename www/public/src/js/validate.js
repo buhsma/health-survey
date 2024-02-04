@@ -12,6 +12,7 @@ function validateSlider(sliderId, warningId) { // von Chris, von mir ergänzt
     // Stoppt den Sprung (action) auf die nächste Seite
     return false;
   }
+  // Keine Warnung (mehr) ausgeben
   setWarning(warningId, "");
   return true;
 }
@@ -19,7 +20,6 @@ function validateSlider(sliderId, warningId) { // von Chris, von mir ergänzt
 function validateRadio() {
   let option1 = document.getElementById('q2y').checked;
   let option2 = document.getElementById('q2n').checked;
-  // let answer1 = document.getElementById('q2').value;
   if (!option1 && !option2) {
     setWarning('warning2', "Please choose yes or no.");
     return false;
@@ -30,7 +30,6 @@ function validateRadio() {
 
 function validateNumber(numberId, warningId) {
   let numberInput = document.getElementById(numberId).value;
-  // console.log(numberInput.value);
   if (!numberInput) {
     setWarning(warningId, "Please input a number 0-9.");
     return false;
@@ -48,6 +47,7 @@ function validateForm(formNumber) {
         return false;
       } 
       else {
+        // Form senden
         document.getElementById('form0').submit();
       }
       break;
@@ -62,6 +62,7 @@ function validateForm(formNumber) {
         return false;
       } 
       else {
+        // Wenn beides eingegeben ist, Form senden
         document.getElementById('form1').submit();
       }
       break;
@@ -72,6 +73,7 @@ function validateForm(formNumber) {
         return false;
       } 
       else {
+        // Form senden
         document.getElementById('form2').submit();
       }
       break;
@@ -94,6 +96,7 @@ function validateForm(formNumber) {
         return false;
       } 
       else {
+        // Wenn alles ausgefüllt ist, absenden
         document.getElementById('form3').submit();
       }
       break;

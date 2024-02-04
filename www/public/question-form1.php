@@ -28,11 +28,6 @@ include './src/components/templates/header.php';
       <p id="warning3" class="validation-warning"></p>
     </div>
     
-    <!-- <div class="form__questionField">
-      <input type="hidden" id="h1" name="hidden" value="question-form1.php">
-      <input type="submit" value="Next questions"/>
-    </div> -->
-    
     <input type="hidden" name="formType" value="form1">
 
     <?php 

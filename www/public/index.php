@@ -40,11 +40,6 @@ $previousPage = 'none';
     
         </div>-->
         
-        <!-- <div class="form__questionField">
-            <input type="hidden" id="h0" name="hidden" value="index.php">
-            <input type="submit" value="Next questions"/>
-        </div> -->
-
         <input type="hidden" name="formType" value="form0">
         
         <?php 
