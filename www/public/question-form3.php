@@ -41,8 +41,9 @@ include './src/components/templates/header.php';
     <!-- <div class="form__questionField">
       <input type="hidden" id="h3" name="hidden" value="question-form3.php">
       <input type="submit" value="Evaluate" />
-      <input type="hidden" name="formType" value="form3">
     </div> -->
+    
+    <input type="hidden" name="formType" value="form3">
 
     <?php 
       include './src/components/submit-nav-btn.php'; 

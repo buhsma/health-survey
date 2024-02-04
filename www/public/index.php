@@ -43,10 +43,11 @@ $previousPage = 'none';
         <!-- <div class="form__questionField">
             <input type="hidden" id="h0" name="hidden" value="index.php">
             <input type="submit" value="Next questions"/>
-            <input type="hidden" name="formType" value="form0">
         </div> -->
+
+        <input type="hidden" name="formType" value="form0">
         
-            <?php 
+        <?php 
             include './src/components/submit-nav-btn.php'; 
             // print_r (get_included_files());
         ?>

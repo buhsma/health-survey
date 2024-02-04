@@ -31,8 +31,9 @@ include './src/components/templates/header.php';
     <!-- <div class="form__questionField">
       <input type="hidden" id="h1" name="hidden" value="question-form1.php">
       <input type="submit" value="Next questions"/>
-      <input type="hidden" name="formType" value="form1">
     </div> -->
+    
+    <input type="hidden" name="formType" value="form1">
 
     <?php 
       include './src/components/submit-nav-btn.php'; 
