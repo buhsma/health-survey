@@ -9,7 +9,7 @@ include './src/components/templates/header.php';
 ?>
 
 <main>
-  <form class="form" action="results.php" method="POST" onsubmit="validateForm3()" id="form3">
+  <form class="form" action="results.php" method="POST" onsubmit="validateForm(3)" id="form3">
     <div class="form__questionField">
       <!-- <label for="q"></label> -->
       <!-- Number -->

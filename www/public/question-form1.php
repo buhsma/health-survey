@@ -6,7 +6,7 @@ include './src/components/templates/header.php';
 ?>
 
 <main>
-  <form class="form" action="./question-form2.php" method="POST" id="form1" onsubmit="validateForm1()" >
+  <form class="form" action="./question-form2.php" method="POST" id="form1" onsubmit="validateForm(1)" >
     <div class="form__questionField">      <!-- Check Radio -->
       <p class="form__question__text">Do you take nutritional supplements?</p>
       <div class="form__questionField__input">

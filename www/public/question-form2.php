@@ -5,7 +5,7 @@ include './src/components/templates/header.php';
 ?>
 
 <main>
-  <form class="form" action="./question-form3.php" method="POST" onsubmit="validateForm2()" id="form2">
+  <form class="form" action="./question-form3.php" method="POST" onsubmit="validateForm(2)" id="form2">
     <div class="form__questionField">      <!-- Check Boxes -->
       <p class="form__question__text">What additional physical activity do you do most?</p>
       <!-- Optional mit Validierung -->
