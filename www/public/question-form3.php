@@ -1,15 +1,12 @@
 <?php
 $pageTitle = "Question Form 3";
+$nextPage = 'results.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
-
-
-// $_SESSION['q5'] = $_POST['q5']
-
 ?>
 
 <main>
-  <form class="form" action="results.php" method="POST" onsubmit="validateForm3()" id="form3">
+  <form class="form" action="results.php" method="POST" onsubmit="validateForm(3)" id="form3">
     <div class="form__questionField">
       <!-- <label for="q"></label> -->
       <!-- Number -->
@@ -38,11 +35,7 @@ include './src/components/templates/header.php';
       <p id="warning10" class="validation-warning"></p>
     </div>
 
-    <!-- <div class="form__questionField">
-      <input type="hidden" id="h3" name="hidden" value="question-form3.php">
-      <input type="submit" value="Evaluate" />
-      <input type="hidden" name="formType" value="form3">
-    </div> -->
+    <input type="hidden" name="formType" value="form3">
 
     <?php 
       include './src/components/submit-nav-btn.php'; 

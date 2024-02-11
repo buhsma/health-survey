@@ -1,12 +1,12 @@
 <?php
 $pageTitle = "Question Form 1";
-$nextPage = 'question-form1.php';
+$nextPage = 'question-form2.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
 ?>
 
 <main>
-  <form class="form" action="./question-form2.php" method="POST" id="form1" onsubmit="validateForm1()" >
+  <form class="form" action="./question-form2.php" method="POST" id="form1" onsubmit="validateForm(1)" >
     <div class="form__questionField">      <!-- Check Radio -->
       <p class="form__question__text">Do you take nutritional supplements?</p>
       <div class="form__questionField__input">
@@ -29,11 +29,7 @@ include './src/components/templates/header.php';
       <p id="warning3" class="validation-warning"></p>
     </div>
     
-    <!-- <div class="form__questionField">
-      <input type="hidden" id="h1" name="hidden" value="question-form1.php">
-      <input type="submit" value="Next questions"/>
-      <input type="hidden" name="formType" value="form1">
-    </div> -->
+    <input type="hidden" name="formType" value="form1">
 
     <?php 
       include './src/components/submit-nav-btn.php'; 
