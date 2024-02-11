@@ -1,8 +1,11 @@
 <?php
 $pageTitle = "Question Form 3";
-$nextPage = 'results.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
+
+
+// $_SESSION['q5'] = $_POST['q5']
+
 ?>
 
 <main>

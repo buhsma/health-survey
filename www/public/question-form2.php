@@ -1,6 +1,5 @@
 <?php
 $pageTitle = "Question Form 2";
-$nextPage = 'question-form3.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
 ?>
@@ -9,6 +8,10 @@ include './src/components/templates/header.php';
   <form class="form" action="./question-form3.php" method="POST" onsubmit="validateForm(2)" id="form2">
     <div class="form__questionField">      <!-- Check Boxes -->
       <p class="form__question__text">What additional physical activity do you do most?</p>
+      <!-- Optional mit Validierung -->
+      <!-- <label for="q40">None</label>
+      <input id="q40" type="checkbox" name="q4[0]" value="none" />
+      <br> -->
       <div class="form__questionField__input">
         <input id="q41" type="checkbox" name="q4[1]" value="lifting-weights" />
         <label for="q41">Lifting weights</label>
