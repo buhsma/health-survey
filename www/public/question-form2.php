@@ -57,7 +57,8 @@ include './src/components/templates/header.php';
     <div class="form__questionField">      <!-- Slider -->
       <p class="form__question__text">Do you feel you do too little, just enough or way too much additional physical activity?</p>
       <label for="q5">0 / Far too little - just right - far too much</label>
-      <input id="q5" type="range" min="0" max="5" value="0" name="q5" />
+      <input id="q5" type="range" min="0" max="5" value="0" name="q5" oninput="updateSliderValue(this.value)"/>
+      <output class="slider" for="q5" id="sliderValue--q1">0</output>
       <p id="warning5" class="validation-warning"></p>
     </div>
     
@@ -73,6 +74,11 @@ include './src/components/templates/header.php';
     ?>
   </form>
 </main>
+<script>
+    function updateSliderValue(value) {
+        document.getElementById('sliderValue--q1').innerHTML = value;
+    }
+</script>
 
 <?php
 include './src/components/templates/footer.php';

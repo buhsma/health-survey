@@ -14,9 +14,9 @@ $previousPage = 'none';
         <div class="form__questionField">
             <p class="form__questionField__text">How healthy are you physically?</p>
             <label class="form__questionField__label--q1" for="q1">0 / Not healthy - Very healthy</label>
-            <input type="range" id="q1" name="q1" min="0" max="5" value="0" step="1" class="form__questionField__q1" >
+            <input type="range" id="q1" name="q1" min="0" max="5" value="0" step="1" class="form__questionField__q1" oninput="updateSliderValue(this.value)">
             <!-- <input type="range" id="q1" name="rating" min="0" max="10" value="0" step="1" class="form__questionField__q1" oninput="updateSliderValue(this.value)"> -->
-            <!-- <output class="slider" for="q1" id="sliderValue--q1">0</output> -->
+            <output class="slider" for="q1" id="sliderValue--q1">0</output>
             <p id="warning1" class="validation-warning"></p>    
         </div>
 
@@ -47,7 +47,7 @@ $previousPage = 'none';
         </div> -->
         
             <?php 
-            include './src/components/submit-nav-btn.php'; 
+            include './src/components/submit-nav-btn.php';
             // print_r (get_included_files());
         ?>
 
