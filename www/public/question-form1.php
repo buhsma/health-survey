@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Question Form 1";
-$nextPage = 'question-form1.php';
+$nextPage = 'question-form2.php';
 include './src/components/templates/head.php';
 include './src/components/templates/header.php';
 ?>
