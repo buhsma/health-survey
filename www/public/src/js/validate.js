@@ -30,7 +30,7 @@ function validateRadio() {
 
 function validateNumber(numberId, warningId) {
   let numberInput = document.getElementById(numberId).value;
-  if (!numberInput) {
+  if (!numberInput || numberInput < 0 || numberInput > 9) {
     setWarning(warningId, "Please input a number 0-9.");
     return false;
   }
